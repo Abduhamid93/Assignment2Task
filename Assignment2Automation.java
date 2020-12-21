@@ -83,14 +83,13 @@ public class Assignment2Automation {
 		
 		
 		//15. Get the price of each result and save them into a list in the order of their appearance
-		//I could not print all prices, it is only printing one car's price 
+		 
 		
-		//System.out.println(driver.findElement(By.className("_8E6guA")).getText());
+		List<WebElement> resultPrices = driver.findElements(By.cssSelector("div[class='_2KVYZH'] span"));
 		
-		
-		WebElement result = driver.findElement(By.cssSelector("div[class='_2KVYZH'] span"));
-		
-		System.out.println(result.getText());
+		for (WebElement webElement : resultPrices) {
+			System.out.println(webElement.getText());
+		}
 		
 		
 		
